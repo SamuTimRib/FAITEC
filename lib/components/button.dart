@@ -13,7 +13,7 @@ class Button extends StatelessWidget {
       height: 43,
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: Colors.purple,
+        color: const Color.fromARGB(1000, 80, 45, 221),
         borderRadius: BorderRadius.circular(10),
       ),
       child: GestureDetector(
