@@ -22,7 +22,22 @@ class Home extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 25.0),
-                child: Button(() {}, "Entrar"),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 100.0), // Adicione margem superior aqui
+                      child: Image.asset(
+                        'assets/images/PlayROLE.png', // Caminho da imagem
+                        width: 200, // Ajuste o tamanho da imagem conforme necessário
+                        height: 200,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 0.0),
+                      child: Button(() {}, "Entrar"),
+                    ),
+                  ],
+                ),
               ),
               ClipRRect(
                 borderRadius: BorderRadius.circular(4.5), // Arredonda as extremidades
@@ -32,49 +47,41 @@ class Home extends StatelessWidget {
                   color: Colors.black, // Cor da linha
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 25.0),
-                child: Button(() {}, "Cadastre-se"),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 3.0),
-                child: Button(() {}, "Entrar sem conta"),
-              ),
-              const SizedBox(height: 10.0), // Espaço vertical entre os botões e a barra
-
-              // Barra personalizada com "ou" no meio e separação dos cantos
+              // Adicione a frase "Entre com" e as imagens aqui
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 26.0),
-                child: Row(
+                child: Column(
                   children: [
-                    Expanded(
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(4.5), // Arredonda as extremidades
-                        child: Container(
-                          height: 9.0, // Espessura da barra
-                          color: Colors.black, // Cor da barra
-                        ),
+                    const Text(
+                      "Entre com",
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.black,
                       ),
                     ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Text(
-                        "OU",
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.black,
+                    const SizedBox(height: 10), // Espaço vertical entre a frase e as imagens
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/images/google.png', // Caminho da imagem do Google
+                          width: 40, // Ajuste o tamanho da imagem conforme necessário
+                          height: 40,
                         ),
-                      ),
+                        const SizedBox(width: 10), // Espaço horizontal entre as imagens
+                        Image.asset(
+                          'assets/images/instagram.png', // Caminho da imagem do Instagram
+                          width: 40, // Ajuste o tamanho da imagem conforme necessário
+                          height: 40,
+                        ),
+                        const SizedBox(width: 10), // Espaço horizontal entre as imagens
+                        Image.asset(
+                          'assets/images/apple.png', // Caminho da imagem da Apple
+                          width: 40, // Ajuste o tamanho da imagem conforme necessário
+                          height: 40,
+                        ),
+                      ],
                     ),
-                    Expanded(
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(4.5), // Arredonda as extremidades
-                        child: Container(
-                          height: 9.0, // Espessura da barra
-                          color: Colors.black, // Cor da barra
-                        ),
-                      ),
-),
                   ],
                 ),
               ),
