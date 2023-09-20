@@ -24,12 +24,12 @@ class Home extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 25.0),
                 child: Button(() {}, "Entrar"),
               ),
-              Container(
-                width: desiredWidth,
-                height: 9.0, // Espessura da linha
-                decoration: BoxDecoration(
+              ClipRRect(
+                borderRadius: BorderRadius.circular(4.5), // Arredonda as extremidades
+                child: Container(
+                  width: desiredWidth,
+                  height: 9.0, // Espessura da linha
                   color: Colors.black, // Cor da linha
-                  borderRadius: BorderRadius.circular(4.5), // Valor de borda para arredondamento
                 ),
               ),
               Padding(
@@ -44,13 +44,16 @@ class Home extends StatelessWidget {
 
               // Barra personalizada com "ou" no meio e separação dos cantos
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                padding: const EdgeInsets.symmetric(horizontal: 26.0),
                 child: Row(
                   children: [
                     Expanded(
-                      child: Container(
-                        height: 9.0, // Espessura da barra
-                        color: Colors.black, // Cor da barra
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(4.5), // Arredonda as extremidades
+                        child: Container(
+                          height: 9.0, // Espessura da barra
+                          color: Colors.black, // Cor da barra
+                        ),
                       ),
                     ),
                     const Padding(
@@ -64,11 +67,14 @@ class Home extends StatelessWidget {
                       ),
                     ),
                     Expanded(
-                      child: Container(
-                        height: 9.0, // Espessura da barra
-                        color: Colors.black, // Cor da barra
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(4.5), // Arredonda as extremidades
+                        child: Container(
+                          height: 9.0, // Espessura da barra
+                          color: Colors.black, // Cor da barra
+                        ),
                       ),
-                    ),
+),
                   ],
                 ),
               ),
