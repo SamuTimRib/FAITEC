@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Button extends StatelessWidget {
-  final Function handleTap;
+  final Function() handleTap;
   final String text;
 
   const Button(this.handleTap, this.text, {super.key});
@@ -17,7 +17,7 @@ class Button extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       child: GestureDetector(
-        onTap: () => handleTap,
+        onTap: handleTap,
         child: Text(
           text,
           style: const TextStyle(

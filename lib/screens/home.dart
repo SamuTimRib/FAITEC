@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/components/button.dart';
+import 'package:flutter_application_1/screens/login.dart';
 
 class Home extends StatelessWidget {
   // ignore: use_key_in_widget_constructors
@@ -25,64 +26,143 @@ class Home extends StatelessWidget {
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 100.0), // Adicione margem superior aqui
+                      padding: const EdgeInsets.only(
+                          bottom: 20.0), // Espaçamento ajustado para 20 pixels
                       child: Image.asset(
                         'assets/images/PlayROLE.png', // Caminho da imagem
-                        width: 200, // Ajuste o tamanho da imagem conforme necessário
+                        width:
+                            200, // Ajuste o tamanho da imagem conforme necessário
                         height: 200,
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 0.0),
-                      child: Button(() {}, "Entrar"),
+                      child: Button(() {
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Login()));
+                      }, "Entrar"),
                     ),
                   ],
                 ),
               ),
               ClipRRect(
-                borderRadius: BorderRadius.circular(4.5), // Arredonda as extremidades
+                borderRadius:
+                    BorderRadius.circular(4.5), // Arredonda as extremidades
                 child: Container(
                   width: desiredWidth,
                   height: 9.0, // Espessura da linha
                   color: Colors.black, // Cor da linha
                 ),
               ),
-              // Adicione a frase "Entre com" e as imagens aqui
+
+              const SizedBox(height: 20.0), // Espaço vertical entre os botões
+              Column(
+                children: [
+                  Button(() {}, "Cadastre-se"),
+                  const SizedBox(
+                      height: 10.0), // Espaço vertical entre os botões
+                  Button(() {}, "Entrar sem conta"),
+                ],
+              ),
+              const SizedBox(height: 20),
+              // Barra personalizada com "ou" no meio e separação dos cantos
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 26.0),
-                child: Column(
+                child: Row(
                   children: [
-                    const Text(
-                      "Entre com",
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.black,
+                    Expanded(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                            4.5), // Arredonda as extremidades
+                        child: Container(
+                          height: 9.0, // Espessura da barra
+                          color: Colors.black, // Cor da barra
+                        ),
                       ),
                     ),
-                    const SizedBox(height: 10), // Espaço vertical entre a frase e as imagens
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/images/google.png', // Caminho da imagem do Google
-                          width: 40, // Ajuste o tamanho da imagem conforme necessário
-                          height: 40,
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 8.0),
+                      child: Text(
+                        "OU",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black,
                         ),
-                        const SizedBox(width: 10), // Espaço horizontal entre as imagens
-                        Image.asset(
-                          'assets/images/instagram.png', // Caminho da imagem do Instagram
-                          width: 40, // Ajuste o tamanho da imagem conforme necessário
-                          height: 40,
+                      ),
+                    ),
+                    Expanded(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                            4.5), // Arredonda as extremidades
+                        child: Container(
+                          height: 9.0, // Espessura da barra
+                          color: Colors.black, // Cor da barra
                         ),
-                        const SizedBox(width: 10), // Espaço horizontal entre as imagens
-                        Image.asset(
-                          'assets/images/apple.png', // Caminho da imagem da Apple
-                          width: 40, // Ajuste o tamanho da imagem conforme necessário
-                          height: 40,
-                        ),
-                      ],
+                      ),
                     ),
                   ],
+                ),
+              ),
+              const SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 26.0),
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Column(
+                    children: [
+                      const Text(
+                        "Entre com",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black,
+                        ),
+                      ),
+                      const SizedBox(
+                          height:
+                              20), // Espaço vertical entre a frase e as imagens
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width:
+                                50, // Ajuste o tamanho da imagem conforme necessário
+                            height: 50,
+                            child: Image.asset(
+                              'assets/images/google.png', // Caminho da imagem do Google
+                              width:
+                                  50, // Ajuste o tamanho da imagem conforme necessário
+                              height: 50,
+                            ),
+                          ),
+                          const SizedBox(
+                              width: 10), // Espaço horizontal entre as imagens
+                          SizedBox(
+                            width:
+                                50, // Ajuste o tamanho da imagem conforme necessário
+                            height: 50,
+                            child: Image.asset(
+                              'assets/images/instagram.png', // Caminho da imagem do Instagram
+                              width:
+                                  50, // Ajuste o tamanho da imagem conforme necessário
+                              height: 50,
+                            ),
+                          ),
+                          const SizedBox(
+                              width: 10), // Espaço horizontal entre as imagens
+                          SizedBox(
+                            width:
+                                50, // Ajuste o tamanho da imagem conforme necessário
+                            height: 50,
+                            child: Image.asset(
+                              'assets/images/apple.png', // Caminho da imagem da Apple
+                              width:
+                                  50, // Ajuste o tamanho da imagem conforme necessário
+                              height: 50,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
