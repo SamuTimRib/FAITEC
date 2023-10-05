@@ -46,15 +46,41 @@ class Feed extends StatelessWidget {
                     ),
                   ],
                 ),
-                Divider( // Barra de separação
-                  thickness: 2.0, // Espessura da barra
-                  color: Colors.grey, // Cor da barra
-                  height: 20.0, // Altura da barra
+                Divider(
+                  thickness: 2.0,
+                  color: Colors.grey,
+                  height: 20.0,
                 ),
               ],
             ),
           ),
-          // Aqui você pode adicionar o conteúdo do feed da cidade abaixo da barra
+          Container(
+            padding: EdgeInsets.all(16.0),
+            margin: EdgeInsets.all(16.0), // Margem nos cantos
+            decoration: BoxDecoration(
+              color: Colors.grey[200], // Fundo cinza
+              borderRadius: BorderRadius.circular(12.0), // Borda arredondada
+            ),
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Escreva o que está achando dos Rolês',
+                      border: InputBorder.none,
+                    ),
+                  ),
+                ),
+                IconButton(
+                  icon: Icon(Icons.camera_alt),
+                  onPressed: () {
+                    // Adicione a lógica para escolher uma imagem aqui
+                  },
+                ),
+              ],
+            ),
+          ),
+          // Aqui você pode adicionar o conteúdo do feed da cidade abaixo do campo de entrada
           Expanded(
             child: Center(
               child: Text('Conteúdo do feed da cidade aqui'),
