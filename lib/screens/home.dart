@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/components/button.dart';
+import 'package:flutter_application_1/screens/feed.dart';
 import 'package:flutter_application_1/screens/login.dart';
 import 'package:flutter_application_1/screens/cadastro.dart';
 
@@ -63,7 +64,9 @@ class Home extends StatelessWidget {
                       }, "Cadastre-se"),
                   const SizedBox(
                       height: 10.0), // Espaço vertical entre os botões
-                  Button(() {}, "Entrar sem conta"),
+                  Button(() {
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Feed()));
+                      }, "Entrar sem conta"),
                 ],
               ),
               const SizedBox(height: 20),

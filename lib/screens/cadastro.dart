@@ -18,6 +18,33 @@ class Cadastro extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
+                  // Seção superior com imagem de perfil e informações
+                  const Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      CircleAvatar(
+                        radius: 30.0, // Raio para torná-lo redondo
+                        backgroundImage: AssetImage('assets/profile_image.png'), // Sua imagem de perfil
+                      ),
+                      SizedBox(height: 16.0),
+                      Text(
+                        'Seu Nome',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        'Seu Sobrenome',
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 32.0), // Espaço entre a seção superior e os campos de entrada
+                  // Seu código começa aqui
                   Row(
                     children: [
                       Expanded(
@@ -27,6 +54,12 @@ class Cadastro extends StatelessWidget {
                             decoration: InputDecoration(
                               labelText: "Nome",
                               hintText: "Digite seu nome",
+                              filled: true,
+                              fillColor: Colors.grey[200], // Cor de fundo cinza
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30.0), // BorderRadius
+                                borderSide: BorderSide.none, // Remove a borda
+                              ),
                             ),
                           ),
                         ),
@@ -38,13 +71,19 @@ class Cadastro extends StatelessWidget {
                             decoration: InputDecoration(
                               labelText: "Sobrenome",
                               hintText: "Digite seu sobrenome",
+                              filled: true,
+                              fillColor: Colors.grey[200], // Cor de fundo cinza
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30.0), // BorderRadius
+                                borderSide: BorderSide.none, // Remove a borda
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ],
                   ),
-                  SizedBox(height: 16.0),
+                  const SizedBox(height: 16.0),
                   Row(
                     children: [
                       Expanded(
@@ -54,6 +93,12 @@ class Cadastro extends StatelessWidget {
                             decoration: InputDecoration(
                               labelText: "Dia",
                               hintText: "DD",
+                              filled: true,
+                              fillColor: Colors.grey[200], // Cor de fundo cinza
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30.0), // BorderRadius
+                                borderSide: BorderSide.none, // Remove a borda
+                              ),
                             ),
                           ),
                         ),
@@ -65,6 +110,12 @@ class Cadastro extends StatelessWidget {
                             decoration: InputDecoration(
                               labelText: "Mês",
                               hintText: "MM",
+                              filled: true,
+                              fillColor: Colors.grey[200], // Cor de fundo cinza
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30.0), // BorderRadius
+                                borderSide: BorderSide.none, // Remove a borda
+                              ),
                             ),
                           ),
                         ),
@@ -76,27 +127,45 @@ class Cadastro extends StatelessWidget {
                             decoration: InputDecoration(
                               labelText: "Ano",
                               hintText: "AAAA",
+                              filled: true,
+                              fillColor: Colors.grey[200], // Cor de fundo cinza
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30.0), // BorderRadius
+                                borderSide: BorderSide.none, // Remove a borda
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ],
                   ),
-                  SizedBox(height: 16.0),
+                  const SizedBox(height: 16.0),
                   TextField(
                     decoration: InputDecoration(
                       labelText: "E-mail",
                       hintText: "Digite seu e-mail",
+                      filled: true,
+                      fillColor: Colors.grey[200], // Cor de fundo cinza
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30.0), // BorderRadius
+                        borderSide: BorderSide.none, // Remove a borda
+                      ),
                     ),
                   ),
-                  SizedBox(height: 16.0),
+                  const SizedBox(height: 16.0),
                   TextField(
                     decoration: InputDecoration(
                       labelText: "Celular",
                       hintText: "Digite seu celular",
+                      filled: true,
+                      fillColor: Colors.grey[200], // Cor de fundo cinza
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30.0), // BorderRadius
+                        borderSide: BorderSide.none, // Remove a borda
+                      ),
                     ),
                   ),
-                  SizedBox(height: 16.0),
+                  const SizedBox(height: 16.0),
                   Row(
                     children: [
                       Expanded(
@@ -107,6 +176,12 @@ class Cadastro extends StatelessWidget {
                             decoration: InputDecoration(
                               labelText: "Senha",
                               hintText: "Digite sua senha",
+                              filled: true,
+                              fillColor: Colors.grey[200], // Cor de fundo cinza
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30.0), // BorderRadius
+                                borderSide: BorderSide.none, // Remove a borda
+                              ),
                             ),
                           ),
                         ),
@@ -119,13 +194,20 @@ class Cadastro extends StatelessWidget {
                             decoration: InputDecoration(
                               labelText: "Repetir Senha",
                               hintText: "Repita sua senha",
+                              filled: true,
+                              fillColor: Colors.grey[200], // Cor de fundo cinza
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30.0), // BorderRadius
+                                borderSide: BorderSide.none, // Remove a borda
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ],
                   ),
-                  SizedBox(height: 16.0),
+                  // Seu código termina aqui
+                  const SizedBox(height: 16.0),
                   Button(() {}, "Cadastrar"),
                 ],
               ),
