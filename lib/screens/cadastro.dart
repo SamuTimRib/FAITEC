@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/components/button.dart';
+import 'package:flutter_application_1/components/text_input.dart';
 
 class Cadastro extends StatelessWidget {
   const Cadastro({Key? key}) : super(key: key);
@@ -45,164 +46,44 @@ class Cadastro extends StatelessWidget {
                   ),
                   const SizedBox(height: 32.0), // Espaço entre a seção superior e os campos de entrada
                   // Seu código começa aqui
-                  Row(
+                  const Row(
                     children: [
                       Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.only(right: 8.0),
-                          child: TextField(
-                            decoration: InputDecoration(
-                              labelText: "Nome",
-                              hintText: "Digite seu nome",
-                              filled: true,
-                              fillColor: Colors.grey[200], // Cor de fundo cinza
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30.0), // BorderRadius
-                                borderSide: BorderSide.none, // Remove a borda
-                              ),
-                            ),
-                          ),
-                        ),
+                        child: TextInput('Nome','Digite seu nome'),
                       ),
                       Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.only(left: 8.0),
-                          child: TextField(
-                            decoration: InputDecoration(
-                              labelText: "Sobrenome",
-                              hintText: "Digite seu sobrenome",
-                              filled: true,
-                              fillColor: Colors.grey[200], // Cor de fundo cinza
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30.0), // BorderRadius
-                                borderSide: BorderSide.none, // Remove a borda
-                              ),
-                            ),
-                          ),
-                        ),
+                        child: TextInput('Sobrenome','Digite seu sobrenome'),
                       ),
                     ],
                   ),
                   const SizedBox(height: 16.0),
-                  Row(
+                  const Row(
                     children: [
                       Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.only(right: 8.0),
-                          child: TextField(
-                            decoration: InputDecoration(
-                              labelText: "Dia",
-                              hintText: "DD",
-                              filled: true,
-                              fillColor: Colors.grey[200], // Cor de fundo cinza
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30.0), // BorderRadius
-                                borderSide: BorderSide.none, // Remove a borda
-                              ),
-                            ),
-                          ),
-                        ),
+                        child: TextInput('Dia','DD'),
                       ),
                       Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.only(right: 8.0),
-                          child: TextField(
-                            decoration: InputDecoration(
-                              labelText: "Mês",
-                              hintText: "MM",
-                              filled: true,
-                              fillColor: Colors.grey[200], // Cor de fundo cinza
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30.0), // BorderRadius
-                                borderSide: BorderSide.none, // Remove a borda
-                              ),
-                            ),
-                          ),
-                        ),
+                        child: TextInput('Mês','MM'),
                       ),
                       Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.only(left: 8.0),
-                          child: TextField(
-                            decoration: InputDecoration(
-                              labelText: "Ano",
-                              hintText: "AAAA",
-                              filled: true,
-                              fillColor: Colors.grey[200], // Cor de fundo cinza
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30.0), // BorderRadius
-                                borderSide: BorderSide.none, // Remove a borda
-                              ),
-                            ),
-                          ),
-                        ),
+                        child: TextInput('Ano','AAAA'),
                       ),
                     ],
                   ),
                   const SizedBox(height: 16.0),
-                  TextField(
-                    decoration: InputDecoration(
-                      labelText: "E-mail",
-                      hintText: "Digite seu e-mail",
-                      filled: true,
-                      fillColor: Colors.grey[200], // Cor de fundo cinza
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30.0), // BorderRadius
-                        borderSide: BorderSide.none, // Remove a borda
-                      ),
-                    ),
-                  ),
+                  const TextInputField("E-mail", "Digite seu e-mail"),
                   const SizedBox(height: 16.0),
-                  TextField(
-                    decoration: InputDecoration(
-                      labelText: "Celular",
-                      hintText: "Digite seu celular",
-                      filled: true,
-                      fillColor: Colors.grey[200], // Cor de fundo cinza
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30.0), // BorderRadius
-                        borderSide: BorderSide.none, // Remove a borda
-                      ),
-                    ),
-                  ),
+                  const TextInputField("Celular", "Digite seu celular"),
                   const SizedBox(height: 16.0),
-                  Row(
+                  const Row(
                     children: [
                       Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.only(right: 8.0),
-                          child: TextField(
-                            obscureText: true,
-                            decoration: InputDecoration(
-                              labelText: "Senha",
-                              hintText: "Digite sua senha",
-                              filled: true,
-                              fillColor: Colors.grey[200], // Cor de fundo cinza
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30.0), // BorderRadius
-                                borderSide: BorderSide.none, // Remove a borda
-                              ),
-                            ),
-                          ),
+                        child: Expanded(
+                          child: TextInput("Senha","Digite sua senha"),
                         ),
                       ),
                       Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.only(left: 8.0),
-                          child: TextField(
-                            obscureText: true,
-                            decoration: InputDecoration(
-                              labelText: "Repetir Senha",
-                              hintText: "Repita sua senha",
-                              filled: true,
-                              fillColor: Colors.grey[200], // Cor de fundo cinza
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30.0), // BorderRadius
-                                borderSide: BorderSide.none, // Remove a borda
-                              ),
-                            ),
-                          ),
-                        ),
+                        child: TextInput("Repetir Senha","Repita sua senha"),
                       ),
                     ],
                   ),
