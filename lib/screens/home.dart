@@ -146,7 +146,7 @@ class Home extends StatelessWidget {
                                 50, // Ajuste o tamanho da imagem conforme necessário
                             height: 50,
                             child: Image.asset(
-                              'assets/images/instagram.png', // Caminho da imagem do Instagram
+                              'assets/images/facebook.png', // Caminho da imagem do Instagram
                               width:
                                   50, // Ajuste o tamanho da imagem conforme necessário
                               height: 50,
