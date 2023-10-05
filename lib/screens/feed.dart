@@ -33,7 +33,7 @@ class Feed extends StatelessWidget {
                 Row(
                   children: <Widget>[
                     CircleAvatar(
-                      backgroundImage: AssetImage('caminho_para_a_imagem.jpg'),
+                      backgroundImage: AssetImage('assets/images/profile_image.png'),
                       radius: 30.0,
                     ),
                     SizedBox(width: 16.0),
