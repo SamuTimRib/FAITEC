@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/components/post.dart';
 
 class Feed extends StatelessWidget {
   const Feed({Key? key});
@@ -7,28 +8,28 @@ class Feed extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Feed da cidade'),
+        title: const Text('Feed da cidade'),
         centerTitle: true,
         leading: IconButton(
-          icon: Icon(Icons.menu),
+          icon: const Icon(Icons.menu),
           onPressed: () {
             // Adicione a lógica para abrir a side bar aqui
           },
         ),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             onPressed: () {
               // Adicione a lógica para voltar aqui
             },
           ),
         ],
       ),
-      body: Column(
+      body: ListView(
         children: <Widget>[
           Container(
-            padding: EdgeInsets.all(16.0),
-            child: Column(
+            padding: const EdgeInsets.all(16.0),
+            child: const Column(
               children: <Widget>[
                 Row(
                   children: <Widget>[
@@ -55,15 +56,15 @@ class Feed extends StatelessWidget {
             ),
           ),
           Container(
-            padding: EdgeInsets.all(16.0),
-            margin: EdgeInsets.all(16.0), // Margem nos cantos
+            padding: const EdgeInsets.all(16.0),
+            margin: const EdgeInsets.all(16.0),
             decoration: BoxDecoration(
-              color: Colors.grey[200], // Fundo cinza
-              borderRadius: BorderRadius.circular(12.0), // Borda arredondada
+              color: Colors.grey[200],
+              borderRadius: BorderRadius.circular(12.0),
             ),
             child: Row(
               children: <Widget>[
-                Expanded(
+                const Expanded(
                   child: TextField(
                     decoration: InputDecoration(
                       hintText: 'Escreva o que está achando dos Rolês',
@@ -72,7 +73,7 @@ class Feed extends StatelessWidget {
                   ),
                 ),
                 IconButton(
-                  icon: Icon(Icons.camera_alt),
+                  icon: const Icon(Icons.camera_alt),
                   onPressed: () {
                     // Adicione a lógica para escolher uma imagem aqui
                   },
@@ -80,12 +81,21 @@ class Feed extends StatelessWidget {
               ],
             ),
           ),
-          // Aqui você pode adicionar o conteúdo do feed da cidade abaixo do campo de entrada
-          Expanded(
-            child: Center(
-              child: Text('Conteúdo do feed da cidade aqui'),
-            ),
+          const Post(
+            'assets/images/Pico.png',
+            'Pico - Bar Underground',
+            'Postado à 7 Min.',
+            'Venha jogar uma sinuca em nosso bar!',
+            'assets/images/Pico.png'
           ),
+          const Post(
+            'assets/images/OficinadoChoppPerfil.png',
+            'Oficina do Chopp',
+            'Postado à 23 Min.',
+            'Já estamos funcionando a todo vapor!',
+            'assets/images/OficinaChopp.png'
+          )
+          // Aqui você pode adicionar mais postagens ou conteúdo do feed da cidade
         ],
       ),
     );
