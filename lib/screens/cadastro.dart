@@ -24,7 +24,7 @@ class Cadastro extends StatelessWidget {
                     children: [
                       CircleAvatar(
                         radius: 30.0, // Raio para torná-lo redondo
-                        backgroundImage: AssetImage('assets/profile_image.png'), // Sua imagem de perfil
+                        backgroundImage: AssetImage('assets/images/profile_image.png'), // Sua imagem de perfil
                       ),
                       SizedBox(height: 16.0),
                       Text(
