@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import '../screens/home.dart';
+import '../screens/feed.dart';
 
-class SideBar extends StatelessWidget{
-  const SideBar({super.key});
+class SideBar extends StatelessWidget {
+  const SideBar({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,61 +32,59 @@ class SideBar extends StatelessWidget{
             ),
           ),
           ListTile(
-            onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Home()));},
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Home()));
+            },
             leading: const Icon(Icons.home, size: 20.0, color: Colors.white),
             title: const Text("Home"),
             textColor: Colors.white,
             dense: true,
           ),
           ListTile(
-            onTap: () {},
-            leading: const Icon(Icons.feed,
-                size: 20.0, color: Colors.white),
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Feed()));
+            },
+            leading: const Icon(Icons.feed, size: 20.0, color: Colors.white),
             title: const Text("Feed da Cidade"),
             textColor: Colors.white,
             dense: true,
-
-            // padding: EdgeInsets.zero,
           ),
           ListTile(
             onTap: () {},
-            leading: const Icon(Icons.person,
-                size: 20.0, color: Colors.white),
+            leading: const Icon(Icons.person, size: 20.0, color: Colors.white),
             title: const Text("Perfil"),
             textColor: Colors.white,
             dense: true,
-
-            // padding: EdgeInsets.zero,
           ),
           ListTile(
             onTap: () {},
-            leading: const Icon(Icons.star_border,
-                size: 20.0, color: Colors.white),
+            leading: const Icon(Icons.star_border, size: 20.0, color: Colors.white),
             title: const Text("Suas Avaliações"),
             textColor: Colors.white,
             dense: true,
-
-            // padding: EdgeInsets.zero,
           ),
           ListTile(
             onTap: () {},
-            leading:
-                const Icon(Icons.calendar_month, size: 20.0, color: Colors.white),
+            leading: const Icon(Icons.calendar_month, size: 20.0, color: Colors.white),
             title: const Text("Eventos"),
             textColor: Colors.white,
             dense: true,
-
-            // padding: EdgeInsets.zero,
           ),
           ListTile(
             onTap: () {},
-            leading:
-                const Icon(Icons.settings, size: 20.0, color: Colors.white),
+            leading: const Icon(Icons.settings, size: 20.0, color: Colors.white),
             title: const Text("Configurações"),
             textColor: Colors.white,
             dense: true,
-
-            // padding: EdgeInsets.zero,
+          ),
+          ListTile( // Adicione o item "Sair" aqui
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Home()));
+            },
+            leading: const Icon(Icons.logout, size: 20.0, color: Colors.white),
+            title: const Text("Sair"),
+            textColor: Colors.white,
+            dense: true,
           ),
         ],
       ),

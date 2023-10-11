@@ -7,7 +7,14 @@ class Post extends StatelessWidget {
   final String postDescription;
   final String postImage;
 
-  const Post( this.establishmentAvatar,  this.establishmentName,  this.postTime,  this.postDescription,  this.postImage,{super.key});
+  const Post(
+    this.establishmentAvatar,
+    this.establishmentName,
+    this.postTime,
+    this.postDescription,
+    this.postImage, {
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,13 +22,13 @@ class Post extends StatelessWidget {
       children: <Widget>[
         Container(
           padding: const EdgeInsets.all(16.0),
-          child:  Row(
+          child: Row(
             children: <Widget>[
               CircleAvatar(
                 backgroundImage: AssetImage(establishmentAvatar),
                 radius: 30.0,
               ),
-              const SizedBox(width: 16.0),
+              const SizedBox(width: 14.0),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -32,6 +39,7 @@ class Post extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+                  const SizedBox(height: 4.0), // Reduza o espaço entre o nome e o horário
                   Text(
                     postTime,
                     style: const TextStyle(
@@ -47,22 +55,23 @@ class Post extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(16.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-               Text(
+              Text(
                 postDescription,
                 style: const TextStyle(
-                  fontSize: 20.0,
+                  fontSize: 18.0,
                   fontWeight: FontWeight.bold,
                 ),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 16.0),
+              const SizedBox(height: 1.0), // Reduza o espaço entre o texto e a imagem
               Container(
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(24.0), // Bordas arredondadas
+                  borderRadius: BorderRadius.circular(24.0),
                 ),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(24.0), // Bordas arredondadas
+                  borderRadius: BorderRadius.circular(24.0),
                   child: Image.asset(
                     postImage,
                     width: 400.0,
